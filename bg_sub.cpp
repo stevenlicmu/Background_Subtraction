@@ -61,8 +61,8 @@ int main(int argc, char* argv[])
     }
 
     //create GUI windows
-    namedWindow("Frame");
-    namedWindow("FG Mask MOG 2");
+    //namedWindow("Frame");
+    //namedWindow("FG Mask MOG 2");
 
     //create Background Subtractor objects
     pMOG2 = createBackgroundSubtractorMOG2(); //MOG2 approach
@@ -82,7 +82,7 @@ int main(int argc, char* argv[])
         return EXIT_FAILURE;
     }
     //destroy GUI windows
-    destroyAllWindows();
+    //destroyAllWindows();
     clock_t end_time=clock();
     cout<< "Running time is: "<<static_cast<double>(end_time-start_time)/CLOCKS_PER_SEC*1000<<"ms"<<endl;
     return EXIT_SUCCESS;
@@ -119,8 +119,8 @@ void processVideo(char* videoFilename) {
         putText(frame, frameNumberString.c_str(), cv::Point(15, 15),
                 FONT_HERSHEY_SIMPLEX, 0.5 , cv::Scalar(0,0,0));
         //show the current frame and the fg masks
-        imshow("Frame", frame);
-        imshow("FG Mask MOG 2", fgMaskMOG2);
+        //imshow("Frame", frame);
+        //imshow("FG Mask MOG 2", fgMaskMOG2);
         //get the input from the keyboard
         keyboard = waitKey( 30 );
 	index++;
