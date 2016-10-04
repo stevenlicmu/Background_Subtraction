@@ -1,4 +1,4 @@
-# opencv
+# Background Subtraction using OpenCV
 
 how to use:
 1/ cmake .
